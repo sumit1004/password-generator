@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Password Generator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Secure Password Generator</h1>
+                <p>Generate strong, unique passwords instantly to protect your online accounts</p>
+                <a href="#generator" class="btn btn-primary">Get Started <i class="fas fa-arrow-down"></i></a>
+            </div>
+            <div class="hero-graphic">
+                <div class="shield">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Generator Section -->
+    <section class="generator-section" id="generator">
+        <div class="container">
+            <h2>Password Generator</h2>
+            
+            <!-- Password Output -->
+            <div class="password-box">
+                <input type="text" id="password" readonly placeholder="Your secure password will appear here">
+              <button class="copy-btn" onclick="copyPassword(this)">
+    Copy
+</button>
+
+            </div>
+
+
+
+            <!-- Length Slider -->
+            <div class="slider-group">
+                <div class="slider-header">
+                    <label>Password Length</label>
+                    <span class="length-display"><span id="lengthValue">12</span> characters</span>
+                </div>
+                <input type="range" id="length" min="4" max="32" value="12" class="slider">
+            </div>
+
+            <!-- Options -->
+            <div class="options-container">
+                <h3>Include Characters</h3>
+                <div class="options-grid">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="uppercase" checked>
+                        <span class="checkbox-custom"></span>
+                        <span class="checkbox-text">Uppercase (A-Z)</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="lowercase" checked>
+                        <span class="checkbox-custom"></span>
+                        <span class="checkbox-text">Lowercase (a-z)</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="numbers" checked>
+                        <span class="checkbox-custom"></span>
+                        <span class="checkbox-text">Numbers (0-9)</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="symbols" checked>
+                        <span class="checkbox-custom"></span>
+                        <span class="checkbox-text">Special (!@#$)</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Buttons -->
+            <div class="button-group">
+                <button class="btn btn-primary btn-large" onclick="generatePassword()">
+                    <i class="fas fa-sync-alt"></i> Generate Password
+                </button>
+               <button class="copy-btn" onclick="copyPassword(this)">
+    Copy
+</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 PassGen. Create secure passwords easily. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
